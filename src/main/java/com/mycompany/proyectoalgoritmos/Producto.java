@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.proyectoalgoritmos;
-import java.util.Collections;
+
 /**
  *
- * @author rober
+ * @author Be
  */
-public class Producto {
+public class Producto implements Comparable<Producto> {
     private int id;
 private String nombre;
 private double precio;
@@ -48,5 +48,10 @@ private int cantidad;
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    @Override
+    public int compareTo(Producto otro) {
+        return Integer.compare(this.id, otro.id);
     }
 }
